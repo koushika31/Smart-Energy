@@ -1,0 +1,95 @@
+.App {
+  text-align: center;
+  animation: fadeIn 1s ease-in;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+  transition: transform 0.5s ease;
+}
+
+.App-logo:hover {
+  transform: scale(1.05) rotate(10deg);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(12px + 1.8vmin);
+  color: #f1f1f1;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+  animation: slideIn 1s ease-out;
+}
+
+.App-link {
+  color: #00ffd5;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.App-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: #00ffd5;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.App-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.App-link:hover {
+  color: #00ffb7;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
