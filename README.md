@@ -39,6 +39,22 @@ Smart-Energy/
 ## 🧪 Setup Instructions
 
 ### 1. Clone the repository:
-```bash
+
 git clone https://github.com/koushika31/Smart-Energy.git
 cd Smart-Energy
+
+cd smart-energy-backend
+npm install        # Install dependencies
+cp .env.example .env  # Create environment config (or manually create .env)
+npm start          # Start the server
+
+cd ../smart-energy-app (1)
+npm install
+npm start          # For web
+# OR
+npx react-native run-android   # For mobile (if React Native)
+
+📝 Make sure to configure your .env file with DB credentials and other required settings. Example:
+PORT=5000
+MONGO_URI=mongodb://localhost:27017/smart-energy
+
